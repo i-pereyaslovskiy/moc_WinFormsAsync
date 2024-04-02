@@ -52,6 +52,7 @@ namespace WinFormsAsync
             Clear();
             lblStart.Text = DateTime.Now.ToLongTimeString();
             textBoxAsync.Text += $"Asynchronously\r\nThread ID<{Environment.CurrentManagedThreadId}>\r\n{await Task.Run(() => AppSleeping(5_000))}Thread ID<{Environment.CurrentManagedThreadId}>\r\n";
+            //textBoxAsync.Text += $"Asynchronously\r\nThread ID<{Environment.CurrentManagedThreadId}>\r\n{await Task.Run(()=>AppSleeping(1000))}Thread ID<{Environment.CurrentManagedThreadId}>\r\n";
             lblEnd.Text = DateTime.Now.ToLongTimeString();
 
         }
@@ -62,6 +63,7 @@ namespace WinFormsAsync
             { 
                 Task.Run(() => AppSleeping(3_000)),
                 Task.Run(() => AppSleeping(5_000)), 
+                Task.Run(() => AppSleeping(9_000)), 
                 Task.Run(() => AppSleeping(9_000)), 
             };
 

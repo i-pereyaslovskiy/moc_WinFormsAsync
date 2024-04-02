@@ -43,7 +43,7 @@
             // 
             // timerButton
             // 
-            timerButton.BackColor = Color.LightCoral;
+            timerButton.BackColor = Color.FromArgb(128, 255, 128);
             timerButton.Location = new Point(27, 440);
             timerButton.Name = "timerButton";
             timerButton.Size = new Size(163, 84);
